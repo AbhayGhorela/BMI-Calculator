@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  .range {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #06b6d4;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    height: 15px;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+      background: #cffafe;
+      border-radius: 50%;
+    }
+  }
+
+  .healthBar{
+    width: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(
+    to right,
+    #3b82f6 0%,   /* blue - Underweight */
+    #22c55e 25%,  /* green - Normal */
+    #facc15 50%,  /* yellow - Overweight */
+    #ef4444 75%  /* red - Obese */
+  );
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    height: 15px;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+      background: #cffafe;
+      border-radius: 50%;
+    }
+  }
+}

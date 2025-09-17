@@ -5,7 +5,10 @@ export const bmiContext = createContext({
     height:0,
     bmiResult:'',
     messageCategory:'',
-    calculateBMI:()=>{}
+    calculateBMI:()=>{},
+    themeMode:'light',
+    darkTheme:()=>{},
+    lightTheme:()=>{}
 
 });
 

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BmiCalculator from "./Components/BmiCalculator";
 import Container from "./Components/Container";
 import { BmiProvider } from "./Context/Context";
 import CalculateBtn from "./Components/CalculateBtn";
 import ResultView from "./Components/ResultView";
+import Theme from "./Components/Theme";
 
 const App = () => {
 
@@ -11,6 +12,15 @@ const App = () => {
   const [height,setHeight] = useState(0);
   const [bmiResult,setBmiResult] = useState(0);
   const [messageCategory,setMessageCategory] = useState('');
+  const [themeMode,setThemeMode] = useState('light');
+
+  const darkTheme = ()=>{
+    setThemeMode('dark');
+  }
+
+  const lightTheme = ()=>{
+    setThemeMode('light');
+  }
 
   const calculateBMI=()=>{
     let bmi = weight / ((height / 100) * (height / 100));
@@ -31,10 +41,17 @@ const App = () => {
     }
   }
 
+  useEffect(()=>{
+    const html = document.querySelector('html');
+    html.classList.remove('light','dark')
+    html.classList.add(themeMode)
+  },[themeMode])
+
 
   return (
-    <BmiProvider value={{weight,setWeight,height,setHeight,bmiResult,setBmiResult,messageCategory,setMessageCategory,calculateBMI}}>
+    <BmiProvider value={{weight,setWeight,height,setHeight,bmiResult,setBmiResult,messageCategory,setMessageCategory,calculateBMI,themeMode,setThemeMode,darkTheme,lightTheme}}>
       <Container>
+        <Theme/>
         <BmiCalculator/>
         <CalculateBtn/>
         <ResultView/>

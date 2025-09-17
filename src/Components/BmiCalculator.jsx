@@ -4,12 +4,12 @@ const BmiCalculator = () => {
   const { setWeight, weight, setHeight, height } = useBmi();
   return (
     <div>
-      <h1 className="text-center font-bold lg:text-7xl md:text-5xl sm:text-3xl text-2xl p-10  text-cyan-950">
+      <h1 className="text-center font-bold lg:text-7xl md:text-5xl sm:text-3xl text-2xl p-10  text-cyan-950 dark:text-white">
         BMI Calculator
       </h1>
-      <div className="bg-white lg:w-5xl md:w-2xl sm:w-140 w-80 h-100 rounded-3xl shadow-xl flex flex-col items-center px-4">
-        <h2 className="font-bold text-cyan-950 text-2xl py-5">Input</h2>
-        <div className="flex justify-between items-center w-full py-6 ">
+      <div className="bg-white lg:w-5xl md:w-2xl sm:w-140 w-80 h-100 rounded-3xl shadow-xl flex flex-col items-center px-4 dark:bg-gray-800">
+        <h2 className="font-bold text-cyan-950 text-2xl py-5 dark:text-white">Input</h2>
+        <div className="flex justify-between items-center w-full py-6 dark:text-white ">
           <label
             htmlFor="inputHeight"
             className="text-sm font-bold text-gray-400"
@@ -36,7 +36,7 @@ const BmiCalculator = () => {
           className="range"
         />
 
-        <div className="flex justify-between items-center w-full py-6 `">
+        <div className="flex justify-between items-center w-full py-6 dark:text-white">
           <label
             htmlFor="inputWeight"
             className="text-sm font-bold text-gray-400"
@@ -47,6 +47,7 @@ const BmiCalculator = () => {
             type="number"
             id="inputWeight"
             value={weight}
+            min={0}
             max={400}
             onChange={(e) => setWeight(e.target.value)}
             className="border-2  outline-none border-gray-300 p-1 w-22"

@@ -33,10 +33,10 @@ const ResultView = () => {
     bmiResult >= category.min && bmiResult < category.max)
 
   return (
-    <div className="bg-white lg:w-5xl md:w-2xl sm:w-140 w-80 h-100 rounded-3xl shadow-xl flex flex-col items-center px-4">
-      <h2 className="font-bold text-cyan-950 text-2xl py-5">Result</h2>
-      <p className="py-5 font-bold text-7xl text-cyan-950">{bmiResult}</p>
-      <p className="flex flex-col items-center gap-3 font-bold text-cyan-950 text-lg py-2">
+    <div className="bg-white lg:w-5xl md:w-2xl sm:w-140 w-80 h-100 rounded-3xl shadow-xl flex flex-col items-center px-4 dark:bg-gray-800">
+      <h2 className="font-bold text-cyan-950 text-2xl py-5 dark:text-white">Result</h2>
+      <p className="py-5 font-bold text-7xl text-cyan-950 dark:text-white">{bmiResult}</p>
+      <p className="flex flex-col items-center gap-3 font-bold text-cyan-950 text-lg py-2 dark:text-white">
         Your BMI Category:
         <span style={{color:activeColor?.color}}>
           {messageCategory}

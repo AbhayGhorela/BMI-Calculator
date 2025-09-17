@@ -19,7 +19,7 @@ It supports **dark/light mode toggle**, provides **BMI category feedback with co
 
 ## 🖼️ Demo  
 
-🔗 **Live Demo:** [Your Deployment Link Here](https://your-app-url.com)  
+🔗 **Live Demo:** [Deployment Link Here](https://bmi-calculator-one-bice.vercel.app/)  
 
 ---
 
